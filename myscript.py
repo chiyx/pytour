@@ -1,0 +1,5 @@
+#! /usr/bin/env python
+# coding=gbk
+
+currency=u"гд"
+print ord(currency)
