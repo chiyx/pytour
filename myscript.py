@@ -1,7 +1,7 @@
 #! /usr/bin/env python
-# coding=gbk
+# coding=utf-8
 
-currency=u"гд"
+currency=u"??"
 print ord(currency)
 
 def fib(n): #write Fibonacci series up to n
@@ -26,6 +26,8 @@ def parrot(voltage, state = 'a stiff', action = 'voom', type = 'Norwegian Blue')
     print "if you put ", voltage, " volts through it."
     print "-- Lovely plumag, the ", type
     print "-- It's ", state, "!"
+
+print parrot.func_dict
 
 parrot(1000)
 parrot(voltage = 1000)
