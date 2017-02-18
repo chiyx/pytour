@@ -71,7 +71,7 @@
 
     ```bash
     pyvenv pytour-venv
-    source pyour-venv/bin/activate
+    source pytour-venv/bin/activate
     ```
 
 - vscode工作空间配置
