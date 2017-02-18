@@ -10,6 +10,20 @@
     ```bash
     brew install python3
     ```
+
+- pypi镜像设置
+    > 加速pip安装第三方库
+
+    ```bash
+    mkdir -p ~/.pip
+    touch ~/.pip/pip.conf
+    cat > ~/.pip/pip.conf <<EOF
+    [global]
+    trusted-host = mirrors.aliyun.com
+    index-url = https://mirrors.aliyun.com/pypi/simple/
+    EOF
+    ```
+
 ### 编辑器 - vscode
 
 - 安装
@@ -34,7 +48,6 @@
         "editor.renderWhitespace": "boundary",
         // python配置-采用pyyhon3同时编码风格采用pep8
         "python.pythonPath": "/usr/local/bin/python3",
-        "python.formatting.provider": "/usr/local/bin/yapf",
         "python.linting.pep8Enabled": true,
         "python.linting.pylintEnabled": false,
         // code-runner 配置python的执行器
