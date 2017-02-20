@@ -90,3 +90,5 @@
 
 1. 书籍: [Python语言及其应用](https://book.douban.com/subject/26675127/)
     - [相关练习Code](./src/introducing_python)
+2. 书籍: [Python编程快速上手 让繁琐的工作自动化](https://book.douban.com/subject/26836700/)
+    - [相关练习Code](./src/automate_python)
