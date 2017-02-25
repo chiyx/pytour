@@ -37,3 +37,6 @@ tags
 
 # venv
 pytour-venv
+
+# db file
+*.db
