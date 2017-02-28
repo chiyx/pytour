@@ -92,3 +92,5 @@
     - [相关练习Code](./src/introducing_python)
 2. 书籍: [Python编程快速上手 让繁琐的工作自动化](https://book.douban.com/subject/26836700/)
     - [相关练习Code](./src/automate_python)
+    - 学习记录
+        - [Mac下安装pyautogui错误解决方案](./src/automate_python/docs/fix_pyautogui_install_fail.md)
