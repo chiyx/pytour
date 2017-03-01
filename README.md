@@ -94,3 +94,5 @@
     - [相关练习Code](./src/automate_python)
     - 学习记录
         - [Mac下安装pyautogui错误解决方案](./src/automate_python/docs/fix_pyautogui_install_fail.md)
+3. 书籍: [数据结构与算法：Python语言描述](https://book.douban.com/subject/26702568/)
+    - [相关练习](./src/algo_in_python)
