@@ -83,6 +83,15 @@ class LList:
     def size(self):
         return self._num
 
+    def rev(self):
+        p = None
+        while self._head is not None:
+            q = self._head
+            self._head = q.next
+            q.next = p
+            p = q
+        self._head = p
+
     def elements(self):
         "遍历生成器"
         p = self._head
@@ -113,5 +122,8 @@ if __name__ == "__main__":
     llist.pop()
     llist.pop_last()
     llist.append(10)
+    print('llist size: %s' % (len(llist)))
+    print(llist)
+    llist.rev()
     print('llist size: %s' % (len(llist)))
     print(llist)
