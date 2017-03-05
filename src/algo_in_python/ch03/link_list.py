@@ -84,6 +84,7 @@ class LList:
         return self._num
 
     def rev(self):
+        "列表反转"
         p = None
         while self._head is not None:
             q = self._head
@@ -91,6 +92,35 @@ class LList:
             q.next = p
             p = q
         self._head = p
+
+    def sort(self):
+        "列表排序"
+        # 空列表或者只有一个元素列表无需排序
+        if self._head is None or self._head.next is None:
+            return
+        # 将元列表分成2个部分: 已排序段和未排序段，原本的_head指向以排序段，rem 指向未排序的列表
+        rem = self._head.next
+        self._head.next = None
+        # 如果还有未排序的列表元素
+        while rem is not None:
+            p = self._head
+            # q 指向需要插入位置的前一个元素
+            q = None
+            # 找出未排序列表第一个元素的插入位置
+            while p is not None and p.elem <= rem.elem:
+                q = p
+                p = p.next
+            # 如果rem当前元素比已排序列表都小，表示需要插入到表头
+            if q is None:
+                self._head = rem
+            # 否则将q.next即为rem当前元素需要插入的位置
+            else:
+                q.next = rem
+            # 从未排序列表中断开rem当前指向的元素，并后移rem
+            q = rem
+            rem = rem.next
+            # 链接后续排序的元素
+            q.next = p
 
     def elements(self):
         "遍历生成器"
@@ -113,6 +143,19 @@ class LList:
     def __len__(self):
         return self._num
 
+    def __getitem__(self, i):
+        index = i if i >= 0 else self._num + i
+        print(index, self._num)
+        if index >= self._num:
+            raise LinkedListUnderlow('in []')
+        n = 0
+        p = self._head
+        while n != index:
+            n += 1
+            p = p.next
+        return p.elem
+
+
 if __name__ == "__main__":
     llist = LList()
     for i in range(10):
@@ -126,4 +169,6 @@ if __name__ == "__main__":
     print(llist)
     llist.rev()
     print('llist size: %s' % (len(llist)))
+    llist.sort()
     print(llist)
+    print(llist[8])
