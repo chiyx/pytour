@@ -24,13 +24,13 @@ def naive_matching(t, p):
 def kmp_matching(t, kmpPattern):
     " KMP 匹配算法"
     p = kmpPattern.pattern
-    m, n = len(t), len(p)
+    m, n = len(p), len(t)
     i, j = 0, 0
     while i < m and j < n:
         if i == -1 or t[j] == p[i]:
             i, j = i + 1, j + 1
         else:
-            i = p.pnext[i]
+            i = kmpPattern.pnext[i]
     if i == m:
         return j - i
     else:
@@ -41,12 +41,24 @@ class KMPPattern:
     "kmp匹配的模式对象，负责将传入的待匹配串，做一定的预处理"
 
     def __init__(self, pattern):
-        self.pattern = patter
+        self.pattern = pattern
         self.pnext = self.__compile()
 
     def __compile(self):
-        return []
+        "生成增对p中各位置的下一个检查位置表"
+        p = self.pattern
+        i, k, m = 0, -1, len(p)
+        pnext = [-1] * m
+        while i < m - 1:
+            if k == -1 or p[i] == p[k]:
+                i, k = i + 1, k + 1
+                pnext[i] = k
+            else:
+                k = pnext[k]
+        print(pnext)
+        return pnext
 
 
 if __name__ == "__main__":
     print(naive_matching('abcd', 'dcefg'))
+    print(kmp_matching('BBC ABCDAB ABCDABCDABDE', KMPPattern('ABCDABD')))
