@@ -55,10 +55,9 @@ class KMPPattern:
                 pnext[i] = k
             else:
                 k = pnext[k]
-        print(pnext)
         return pnext
 
 
 if __name__ == "__main__":
     print(naive_matching('abcd', 'dcefg'))
-    print(kmp_matching('BBC ABCDAB ABCDABCDABDE', KMPPattern('ABCDABD')))
+    print(kmp_matching('BBC ABCDAB ABCDABCDABDE', KMPPattern('ABCDABDE')))
