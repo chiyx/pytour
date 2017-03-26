@@ -98,3 +98,5 @@
     - [相关练习](./src/algo_in_python)
 4. [leetCode](https://leetcode.com/problemset/algorithms/)解题
     - [相关练习](./src/leetcode)
+5. 书籍: [Python网络编程(第三版)](https://book.douban.com/subject/26869212/)
+    - [相关练习](./src/network_python)
