@@ -44,7 +44,7 @@ class PrioQueue:
         while i > 0 and e < elems[j]:
             elems[i] = elems[j]
             i, j = j, (j - 1) // 2
-        elems[i] == e
+        elems[i] = e
 
     def siftdown(self, e, begin, end):
         elems, i, j = self._elems, begin, begin * 2 + 1
@@ -66,4 +66,7 @@ class PrioQueue:
 if __name__ == '__main__':
     prioQueue = PrioQueue([3, 2, 4, 6, 9, 22, 11, 9, 3, 5])
     while not prioQueue.is_empty():
-        print(prioQueue.dequeue(), end='\t')
+        e = prioQueue.dequeue()
+        if e is None:
+            print("hh")
+        print(e, end='\t')
