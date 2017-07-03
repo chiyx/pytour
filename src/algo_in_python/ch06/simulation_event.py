@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-# coding = utf-8
+# coding=utf-8
 
 # simulation_event.py - 离散事件模拟
 
