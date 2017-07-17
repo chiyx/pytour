@@ -10,3 +10,5 @@ ResourceDirPath = os.path.split(os.path.split(os.path.realpath(__file__))[0])[
 def getRealPath(filename):
     "get the real path of file in resoures dir"
     return ResourceDirPath + filename
+
+

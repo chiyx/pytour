@@ -90,13 +90,15 @@
 
 1. 书籍: [Python语言及其应用](https://book.douban.com/subject/26675127/)
     - [相关练习Code](./src/introducing_python)
-2. 书籍: [Python编程快速上手 让繁琐的工作自动化](https://book.douban.com/subject/26836700/)
+1. 书籍: [Python编程快速上手 让繁琐的工作自动化](https://book.douban.com/subject/26836700/)
     - [相关练习Code](./src/automate_python)
     - 学习记录
         - [Mac下安装pyautogui错误解决方案](./src/automate_python/docs/fix_pyautogui_install_fail.md)
-3. 书籍: [数据结构与算法：Python语言描述](https://book.douban.com/subject/26702568/)
+1. 书籍: [数据结构与算法：Python语言描述](https://book.douban.com/subject/26702568/)
     - [相关练习](./src/algo_in_python)
-4. [leetCode](https://leetcode.com/problemset/algorithms/)解题
+1. [leetCode](https://leetcode.com/problemset/algorithms/)解题
     - [相关练习](./src/leetcode)
-5. 书籍: [Python网络编程(第三版)](https://book.douban.com/subject/26869212/)
+1. 书籍: [Python网络编程(第三版)](https://book.douban.com/subject/26869212/)
     - [相关练习](./src/network_python)
+1. 书籍: [机器学习实战](https://book.douban.com/subject/24703171/)
+    - [相关练习](./src/machine_learn_action)
