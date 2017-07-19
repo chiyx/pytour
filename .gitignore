@@ -40,3 +40,4 @@ pytour-venv
 
 # db file
 *.db
+cstate.p

@@ -83,6 +83,7 @@ def test_iter():
 
 
 def main():
+    print(sys.getfilesystemencoding())
     # manual_iter_1()
     # manual_iter_2()
     # for i in frange(0, 5, 0.5):
