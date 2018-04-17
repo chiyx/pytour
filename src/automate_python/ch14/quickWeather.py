@@ -4,6 +4,7 @@
 import json
 import requests
 import sys
+import collections.abc
 
 if len(sys.argv) < 2:
     print('Usage: quickWeather.py location')
