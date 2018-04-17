@@ -7,7 +7,9 @@ def tag(name, *content, cls=None, **attrs):
         attrs['class'] = cls
     if attrs:
         attr_str = ''.join(' %s="%s"' %
-                           (attr, value) for attr, value in sorted(attrs.items()))
+                           (attr, value)
+                           for attr, value in sorted(attrs.items())
+                           )
     else:
         attr_str = ''
     if content:
