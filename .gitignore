@@ -42,3 +42,6 @@ pytour-venv
 *.db
 cstate.p
 dummp
+
+# mac
+.DS_Store
