@@ -23,7 +23,9 @@ def main():
     exc_coro.send(11)
     exc_coro.throw(DemoException)
     exc_coro.send(11)
-    exc_coro.throw(ZeroDivisionError)
+    exc_coro.close()
+    exc_coro.send(22)
+    # exc_coro.throw(ZeroDivisionError)
 
 if __name__ == '__main__':
     main()
